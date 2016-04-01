@@ -1,57 +1,34 @@
 #include <windows.h>
 #include <iostream>
-
-class TurnstileGate
-{
-public:
-	TurnstileGate();
-	~TurnstileGate();
-
-	void Lock(){ std::cout << " Lock " << std::endl; }
-	void Unlock(){ std::cout << " Unlock " << std::endl; }
-	void Alarm(){ std::cout << " Alarm " << std::endl; }
-	void ThankYou(){ std::cout << " ThankYou " << std::endl; }
-	void ThankYouOff(){ std::cout << " ThankYouOff " << std::endl; }
-	void ResetAlarm(){ std::cout << " ResetAlarm " << std::endl; }
-};
-
-class TurnstileStateMachine : public TurnstileGate
-{
-public:
-	TurnstileStateMachine(){}
-	~TurnstileStateMachine(){}
-
-	void Coin(){ }
-	void Pass(){ }
-	void SetState(){}
-};
-
-class TurnstileState
-{
-
-};
+#include "TurnstileStateMachine.h"
+#include "TurnstileGate.h"
 
 int main()
 {
+	TurnstileGate* gate = new TurnstileGate();
+	TurnstileStateMachine* TSM = new TurnstileStateMachine(gate);
+
 	bool exit = false;
 
 	while (exit == false)
 	{
 		if (GetAsyncKeyState('1'))
 		{
-			std::cout << " 1 " << std::endl;
+			TSM->Coin();
+			Sleep(1000);
 		}
 		if (GetAsyncKeyState('2'))
 		{
-			std::cout << " 2 " << std::endl;
+			TSM->Pass();
+			Sleep(1000);
 		}
 		if (GetAsyncKeyState('3'))
 		{
-			std::cout << " 3 " << std::endl;
+			TSM->resetAlarm();
 		}
 		if (GetAsyncKeyState('4'))
 		{
-			std::cout << " 4 " << std::endl;
+			TSM->ready();
 		}
 
 		if (GetAsyncKeyState(VK_ESCAPE))
@@ -59,6 +36,9 @@ int main()
 			exit = true;
 		}
 	}
+
+	delete gate;
+	delete TSM;
 
 	return 1;
 }

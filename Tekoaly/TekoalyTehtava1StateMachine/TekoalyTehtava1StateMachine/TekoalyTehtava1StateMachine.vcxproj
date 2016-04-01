@@ -66,6 +66,14 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LockedState.h" />
+    <ClInclude Include="TurnstileGate.h" />
+    <ClInclude Include="TurnstileState.h" />
+    <ClInclude Include="TurnstileStateMachine.h" />
+    <ClInclude Include="UnlockedState.h" />
+    <ClInclude Include="Violation.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
