@@ -1,8 +1,7 @@
 #pragma once
 
-#include "TurnstileStateMachine.h"
 
-class TurnstileStateMachine;
+
 class TurnstileState
 {
 public:

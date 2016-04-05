@@ -1,5 +1,6 @@
 #pragma once
 #include "TurnstileState.h"
+
 #include <iostream>
 
 class LockedState : public TurnstileState

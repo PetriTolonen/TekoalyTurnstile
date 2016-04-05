@@ -1,7 +1,8 @@
 #pragma once
 #include "TurnstileState.h"
 #include <iostream>
-#include "LockedState.h"
+
+#include "TurnstileStateMachine.h"
 
 class UnLockedState : public TurnstileState
 {
