@@ -26,7 +26,7 @@ public:
 	{
 		if (alarmreset == true)
 		{
-			m_TSM->SetLockedState();
+			m_TSM->setCurrentState();
 		}		
 	}
 

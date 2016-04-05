@@ -17,6 +17,6 @@ public:
 	void pass()
 	{
 		m_TSM->getGate()->Unlock();
-		m_TSM->SetLockedState();
+		m_TSM->setCurrentState();
 	}
 };

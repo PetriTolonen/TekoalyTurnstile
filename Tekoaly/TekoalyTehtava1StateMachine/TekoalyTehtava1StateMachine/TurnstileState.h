@@ -6,7 +6,7 @@ class TurnstileStateMachine;
 class TurnstileState
 {
 public:
-	TurnstileState(TurnstileStateMachine* TSM): m_TSM(TSM){}
+	TurnstileState(TurnstileStateMachine* TSM) : m_TSM(TSM){ }
 	virtual ~TurnstileState(){}
 	virtual void coin(){}
 	virtual void pass(){}
