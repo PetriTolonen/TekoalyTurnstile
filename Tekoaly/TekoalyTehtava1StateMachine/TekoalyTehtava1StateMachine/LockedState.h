@@ -10,11 +10,11 @@ public:
 
 	void coin()
 	{
-		m_TSM->setCurrentState();
+		m_TSM->SetUnLockeState();
 	}
 
 	void pass()
 	{
-		m_TSM->setCurrentState();
+		m_TSM->SetViolationState();
 	}
 };

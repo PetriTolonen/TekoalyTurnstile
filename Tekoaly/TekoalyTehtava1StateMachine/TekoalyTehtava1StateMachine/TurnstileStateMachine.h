@@ -1,6 +1,8 @@
 #pragma once
 #include "TurnstileGate.h"
-#include "TurnstileState.h"
+#include "LockedState.h"
+#include "UnlockedState.h"
+#include "Violation.h"
 
 class TurnstileGate;
 
@@ -9,33 +11,45 @@ class TurnstileStateMachine
 public:
 	TurnstileStateMachine(TurnstileGate* gate) : gate(gate)
 	{
-		std::cout << "TMS constructor" << std::endl;
+		std::cout << "TMS constructor starts" << std::endl;
+		lockedstate = new LockedState(this);
+		unlockedstate = new UnLockedState(this);
+		violation = new Violation(this);
+		std::cout << "TMS constructor ends" << std::endl;
 	}
 	~TurnstileStateMachine(){}
 
 	void Coin()
 	{
-		currentState->coin();
+		state->coin();
 	}
 	void Pass()
 	{
-		currentState->pass();
+		state->pass();
 	}
 
 	void resetAlarm()
 	{
-		currentState->reset();
+		state->reset();
 	}
 
 	void ready()
 	{
-		currentState->ready();
+		state->ready();
 	}
 
-	void setCurrentState(TurnstileState* state){ this->currentState = state; }
-
+	void SetLockedState(){ this->state = lockedstate; }
+	void SetUnLockeState(){ this->state = unlockedstate; }
+	void SetViolationState()
+	{
+		this->state->setalarm();
+		this->state = violation;
+	}
 	TurnstileGate* getGate(){ return gate; }
 private:
-	TurnstileState* currentState;
+	TurnstileState* state;
 	TurnstileGate* gate;
+	LockedState* lockedstate;
+	UnLockedState* unlockedstate;
+	Violation* violation;
 };
