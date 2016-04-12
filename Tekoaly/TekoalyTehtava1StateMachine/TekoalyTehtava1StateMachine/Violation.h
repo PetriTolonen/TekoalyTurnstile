@@ -19,6 +19,7 @@ public:
 
 	void reset()
 	{
+		m_TSM->getGate()->ResetAlarm();
 		alarmreset = true;
 	}
 
@@ -26,13 +27,14 @@ public:
 	{
 		if (alarmreset == true)
 		{
+			
 			m_TSM->SetLockedState();
 		}		
 	}
 
 	void setalarm()
 	{
-		std::cout << "alarm!!!" << std::endl;
+		m_TSM->getGate()->Alarm();
 		alarmreset = false;
 	}
 
