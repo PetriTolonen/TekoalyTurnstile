@@ -2,8 +2,6 @@
 #include "TurnstileState.h"
 #include <iostream>
 
-#include "TurnstileStateMachine.h"
-
 class UnLockedState : public TurnstileState
 {
 public:

@@ -1,14 +1,14 @@
-﻿Build started 5.4.2016 13:14:45.
+﻿Build started 12.4.2016 9:57:48.
      1>Project "C:\Users\PetriTol\Desktop\TekoalyTurnstile\Tekoaly\TekoalyTehtava1StateMachine\TekoalyTehtava1StateMachine\TekoalyTehtava1StateMachine.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp TurnstileStateMachine.cpp
          TurnstileStateMachine.cpp
-     1>c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\unlockedstate.h(15): error C2027: use of undefined type 'TurnstileGate'
-                 c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\turnstilestatemachine.h(5) : see declaration of 'TurnstileGate'
-     1>c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\unlockedstate.h(15): error C2227: left of '->ThankYou' must point to class/struct/union/generic type
-     1>c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\unlockedstate.h(20): error C2027: use of undefined type 'TurnstileGate'
-                 c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\turnstilestatemachine.h(5) : see declaration of 'TurnstileGate'
-     1>c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\unlockedstate.h(20): error C2227: left of '->Unlock' must point to class/struct/union/generic type
+     1>c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\unlockedstate.h(13): error C2027: use of undefined type 'TurnstileGate'
+                 c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\turnstilestatemachine.h(3) : see declaration of 'TurnstileGate'
+     1>c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\unlockedstate.h(13): error C2227: left of '->ThankYou' must point to class/struct/union/generic type
+     1>c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\unlockedstate.h(18): error C2027: use of undefined type 'TurnstileGate'
+                 c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\turnstilestatemachine.h(3) : see declaration of 'TurnstileGate'
+     1>c:\users\petritol\desktop\tekoalyturnstile\tekoaly\tekoalytehtava1statemachine\tekoalytehtava1statemachine\unlockedstate.h(18): error C2227: left of '->Unlock' must point to class/struct/union/generic type
          Generating Code...
          Skipping... (no relevant changes detected)
          Main.cpp
@@ -16,4 +16,4 @@
 
 Build FAILED.
 
-Time Elapsed 00:00:00.28
+Time Elapsed 00:00:00.32
