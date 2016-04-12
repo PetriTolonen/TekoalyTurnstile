@@ -1,4 +1,5 @@
 #pragma once
+#include "TurnstileGate.h"
 
 class TurnstileGate;
 class LockedState;

@@ -9,6 +9,8 @@ TurnstileStateMachine::TurnstileStateMachine(TurnstileGate* gate) : gate(gate)
 	lockedstate = new LockedState(this);
 	unlockedstate = new UnLockedState(this);
 	violation = new Violation(this);
+
+	SetLockedState();
 	std::cout << "TMS constructor ends" << std::endl;
 }
 

@@ -11,11 +11,13 @@ public:
 
 	void coin()
 	{
+		m_TSM->getGate()->Unlock();
 		m_TSM->SetUnLockeState();
 	}
 
 	void pass()
 	{
+		m_TSM->getGate()->Alarm();
 		m_TSM->SetViolationState();
 	}
 };
